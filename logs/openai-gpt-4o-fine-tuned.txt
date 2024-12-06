@@ -1,0 +1,95 @@
+Evaluating model: ft:gpt-4o-2024-08-06:mastercard::A0krlVBL
+loading train/test data files
+DatasetDict({
+    train: Dataset({
+        features: ['chinese', 'english'],
+        num_rows: 4528
+    })
+    test: Dataset({
+        features: ['chinese', 'english'],
+        num_rows: 1133
+    })
+})
+--------------------------------------------------
+chinese: 老耿端起枪，眯缝起一只三角眼，一搂扳机响了枪，冰雹般的金麻雀劈哩啪啦往下落，铁砂子在柳枝间飞迸着，嚓嚓有声。
+--------------------------------------------------
+english: Old Geng picked up his shotgun, squinted, and pulled the trigger. Two sparrows crashed to the ground like hailstones as shotgun pellets tore noisily through the branches.
+*** Evaluating with num_shots: 0
+100%|██████████| 1133/1133 [19:12<00:00,  1.02s/it]
+gpt-4o/epochs-01 metrics: {'meteor': 0.37829977579665147, 'sacrebleu': {'score': 11.961183004083166, 'counts': [12783, 4604, 2130, 1067], 'totals': [29124, 27991, 26875, 25764], 'precisions': [43.89163576431809, 16.448144046300598, 7.925581395348837, 4.141437664958858], 'bp': 0.9640596438285618, 'sys_len': 29124, 'ref_len': 30190}, 'bleu_scores': {'bleu': 0.11961183004083172, 'precisions': [0.4389163576431809, 0.16448144046300597, 0.07925581395348837, 0.04141437664958857], 'brevity_penalty': 0.9640596438285618, 'length_ratio': 0.9646902947996026, 'translation_length': 29124, 'reference_length': 30190}, 'rouge_scores': {'rouge1': 0.42429274225313846, 'rouge2': 0.17523641258245923, 'rougeL': 0.369425658597467, 'rougeLsum': 0.369423462411946}, 'accuracy': 0.00088261253309797, 'correct_ids': [77]}
+Evaluating model: ft:gpt-4o-2024-08-06:mastercard::A1E8HfT2
+loading train/test data files
+DatasetDict({
+    train: Dataset({
+        features: ['chinese', 'english'],
+        num_rows: 4528
+    })
+    test: Dataset({
+        features: ['chinese', 'english'],
+        num_rows: 1133
+    })
+})
+--------------------------------------------------
+chinese: 老耿端起枪，眯缝起一只三角眼，一搂扳机响了枪，冰雹般的金麻雀劈哩啪啦往下落，铁砂子在柳枝间飞迸着，嚓嚓有声。
+--------------------------------------------------
+english: Old Geng picked up his shotgun, squinted, and pulled the trigger. Two sparrows crashed to the ground like hailstones as shotgun pellets tore noisily through the branches.
+*** Evaluating with num_shots: 0
+100%|██████████| 1133/1133 [17:26<00:00,  1.08it/s]
+gpt-4o/epochs-02 metrics: {'meteor': 0.378362442260616, 'sacrebleu': {'score': 11.94987840396735, 'counts': [12801, 4612, 2127, 1061], 'totals': [29101, 27968, 26852, 25740], 'precisions': [43.98817910037456, 16.490274599542335, 7.9211976761507525, 4.121989121989122], 'bp': 0.9632701331199107, 'sys_len': 29101, 'ref_len': 30190}, 'bleu_scores': {'bleu': 0.11949878403967351, 'precisions': [0.4398817910037456, 0.16490274599542334, 0.07921197676150753, 0.04121989121989122], 'brevity_penalty': 0.9632701331199107, 'length_ratio': 0.9639284531301755, 'translation_length': 29101, 'reference_length': 30190}, 'rouge_scores': {'rouge1': 0.4244959919113983, 'rouge2': 0.17487441168118406, 'rougeL': 0.36961992190392845, 'rougeLsum': 0.3696134312327403}, 'accuracy': 0.00088261253309797, 'correct_ids': [77]}
+Evaluating model: ft:gpt-4o-2024-08-06:mastercard::A1EEMdkp
+loading train/test data files
+DatasetDict({
+    train: Dataset({
+        features: ['chinese', 'english'],
+        num_rows: 4528
+    })
+    test: Dataset({
+        features: ['chinese', 'english'],
+        num_rows: 1133
+    })
+})
+--------------------------------------------------
+chinese: 老耿端起枪，眯缝起一只三角眼，一搂扳机响了枪，冰雹般的金麻雀劈哩啪啦往下落，铁砂子在柳枝间飞迸着，嚓嚓有声。
+--------------------------------------------------
+english: Old Geng picked up his shotgun, squinted, and pulled the trigger. Two sparrows crashed to the ground like hailstones as shotgun pellets tore noisily through the branches.
+*** Evaluating with num_shots: 0
+100%|██████████| 1133/1133 [18:51<00:00,  1.00it/s] 
+gpt-4o/epochs-03 metrics: {'meteor': 0.37969689267707335, 'sacrebleu': {'score': 12.039126826084276, 'counts': [12800, 4627, 2152, 1077], 'totals': [29117, 27984, 26868, 25756], 'precisions': [43.9605728612151, 16.53444825614637, 8.009528063123419, 4.181549930113372], 'bp': 0.9638194215435517, 'sys_len': 29117, 'ref_len': 30190}, 'bleu_scores': {'bleu': 0.1203912682608427, 'precisions': [0.43960572861215097, 0.1653444825614637, 0.08009528063123418, 0.041815499301133714], 'brevity_penalty': 0.9638194215435517, 'length_ratio': 0.9644584299436899, 'translation_length': 29117, 'reference_length': 30190}, 'rouge_scores': {'rouge1': 0.4253565511807691, 'rouge2': 0.1762509031111424, 'rougeL': 0.3709362250350436, 'rougeLsum': 0.37090080700005995}, 'accuracy': 0.00088261253309797, 'correct_ids': [77]}
+Evaluating model: ft:gpt-4o-2024-08-06:mastercard::A1LIBJeg
+loading train/test data files
+DatasetDict({
+    train: Dataset({
+        features: ['chinese', 'english'],
+        num_rows: 4528
+    })
+    test: Dataset({
+        features: ['chinese', 'english'],
+        num_rows: 1133
+    })
+})
+--------------------------------------------------
+chinese: 老耿端起枪，眯缝起一只三角眼，一搂扳机响了枪，冰雹般的金麻雀劈哩啪啦往下落，铁砂子在柳枝间飞迸着，嚓嚓有声。
+--------------------------------------------------
+english: Old Geng picked up his shotgun, squinted, and pulled the trigger. Two sparrows crashed to the ground like hailstones as shotgun pellets tore noisily through the branches.
+*** Evaluating with num_shots: 0
+100%|██████████| 1133/1133 [18:37<00:00,  1.01it/s]
+gpt-4o/epochs-04 metrics: {'meteor': 0.3784063502724225, 'sacrebleu': {'score': 11.971696060849887, 'counts': [12785, 4606, 2132, 1069], 'totals': [29104, 27971, 26855, 25743], 'precisions': [43.92866959868059, 16.467055164277287, 7.938931297709924, 4.152585168783747], 'bp': 0.9633731468442895, 'sys_len': 29104, 'ref_len': 30190}, 'bleu_scores': {'bleu': 0.11971696060849878, 'precisions': [0.4392866959868059, 0.16467055164277286, 0.07938931297709924, 0.04152585168783747], 'brevity_penalty': 0.9633731468442893, 'length_ratio': 0.9640278237827095, 'translation_length': 29104, 'reference_length': 30190}, 'rouge_scores': {'rouge1': 0.4238707558842832, 'rouge2': 0.17481350068875362, 'rougeL': 0.3695909612883631, 'rougeLsum': 0.36945188893013925}, 'accuracy': 0.00088261253309797, 'correct_ids': [77]}
+Evaluating model: ft:gpt-4o-2024-08-06:mastercard::A1LKnnlI
+loading train/test data files
+DatasetDict({
+    train: Dataset({
+        features: ['chinese', 'english'],
+        num_rows: 4528
+    })
+    test: Dataset({
+        features: ['chinese', 'english'],
+        num_rows: 1133
+    })
+})
+--------------------------------------------------
+chinese: 老耿端起枪，眯缝起一只三角眼，一搂扳机响了枪，冰雹般的金麻雀劈哩啪啦往下落，铁砂子在柳枝间飞迸着，嚓嚓有声。
+--------------------------------------------------
+english: Old Geng picked up his shotgun, squinted, and pulled the trigger. Two sparrows crashed to the ground like hailstones as shotgun pellets tore noisily through the branches.
+*** Evaluating with num_shots: 0
+100%|██████████| 1133/1133 [19:22<00:00,  1.03s/it]
+gpt-4o/epochs-05 metrics: {'meteor': 0.3797983554067647, 'sacrebleu': {'score': 12.064338049153614, 'counts': [12791, 4641, 2157, 1081], 'totals': [29111, 27978, 26862, 25750], 'precisions': [43.93871732334856, 16.58803345485739, 8.029930757203484, 4.1980582524271846], 'bp': 0.9636134724514155, 'sys_len': 29111, 'ref_len': 30190}, 'bleu_scores': {'bleu': 0.12064338049153608, 'precisions': [0.43938717323348564, 0.16588033454857387, 0.08029930757203485, 0.041980582524271844], 'brevity_penalty': 0.9636134724514155, 'length_ratio': 0.9642596886386221, 'translation_length': 29111, 'reference_length': 30190}, 'rouge_scores': {'rouge1': 0.4248543304997294, 'rouge2': 0.1768290761907465, 'rougeL': 0.370949573624763, 'rougeLsum': 0.370875336303769}, 'accuracy': 0.00088261253309797, 'correct_ids': [77]}

@@ -1,0 +1,186 @@
+Submitting job: /common/home/users/d/dh.huang.2023/code/llm-qa-eval/scripts/tune_rp.sh
+Current Directory: /common/home/users/d/dh.huang.2023/code/llm-qa-eval
+Sun Aug 25 16:31:23 2024       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.90.07              Driver Version: 550.90.07      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA L40                     On  |   00000000:01:00.0 Off |                    0 |
+| N/A   38C    P8             36W /  300W |       1MiB /  46068MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Linux lagoon 4.18.0-553.5.1.el8_10.x86_64 #1 SMP Thu Jun 6 09:41:19 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+NAME="Rocky Linux"
+VERSION="8.10 (Green Obsidian)"
+ID="rocky"
+ID_LIKE="rhel centos fedora"
+VERSION_ID="8.10"
+PLATFORM_ID="platform:el8"
+PRETTY_NAME="Rocky Linux 8.10 (Green Obsidian)"
+ANSI_COLOR="0;32"
+LOGO="fedora-logo-icon"
+CPE_NAME="cpe:/o:rocky:rocky:8:GA"
+HOME_URL="https://rockylinux.org/"
+BUG_REPORT_URL="https://bugs.rockylinux.org/"
+SUPPORT_END="2029-05-31"
+ROCKY_SUPPORT_PRODUCT="Rocky-Linux-8"
+ROCKY_SUPPORT_PRODUCT_VERSION="8.10"
+REDHAT_SUPPORT_PRODUCT="Rocky Linux"
+REDHAT_SUPPORT_PRODUCT_VERSION="8.10"
+Architecture:        x86_64
+CPU op-mode(s):      32-bit, 64-bit
+Byte Order:          Little Endian
+CPU(s):              128
+On-line CPU(s) list: 0-127
+Thread(s) per core:  2
+Core(s) per socket:  64
+Socket(s):           1
+NUMA node(s):        1
+Vendor ID:           AuthenticAMD
+CPU family:          25
+Model:               1
+Model name:          AMD EPYC 7763 64-Core Processor
+Stepping:            1
+CPU MHz:             2450.000
+CPU max MHz:         3529.0520
+CPU min MHz:         1500.0000
+BogoMIPS:            4891.15
+Virtualization:      AMD-V
+L1d cache:           32K
+L1i cache:           32K
+L2 cache:            512K
+L3 cache:            32768K
+NUMA node0 CPU(s):   0-127
+Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 invpcid_single hw_pstate ssbd mba ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd amd_ppin brs arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold v_vmsave_vmload vgif v_spec_ctrl umip pku ospke vaes vpclmulqdq rdpid overflow_recov succor smca fsrm
+MemTotal:       527669148 kB
+Current Directory: /common/home/users/d/dh.huang.2023/code/llm-qa-eval
+QA_WITH_MS_MACRO=
+RESULT_FILENAME_PREFIX_BASE=Phi-3.5-mini-instruct_wd
+Testing microsoft/Phi-3.5-mini-instruct with ./data/datasets/WebQSP.test.wikidata.json
+RESULT_FILENAME_PREFIX=Phi-3.5-mini-instruct_wd_true
+[nltk_data] Downloading package punkt to
+[nltk_data]     /common/home/users/d/dh.huang.2023/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+A new version of the following files was downloaded from https://huggingface.co/microsoft/Phi-3.5-mini-instruct:
+- configuration_phi3.py
+. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
+A new version of the following files was downloaded from https://huggingface.co/microsoft/Phi-3.5-mini-instruct:
+- modeling_phi3.py
+. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
+2024-08-25 16:32:14,372 [WARNING] [modeling_phi3.py:62] `flash-attention` package not found, consider installing for better performance: No module named 'flash_attn'.
+2024-08-25 16:32:14,372 [WARNING] [modeling_phi3.py:66] Current `flash-attention` does not support `window_size`. Either upgrade or use `attn_implementation='eager'`.
+Downloading shards:   0%|          | 0/2 [00:00<?, ?it/s]Downloading shards:  50%|█████     | 1/2 [00:15<00:15, 15.44s/it]Downloading shards: 100%|██████████| 2/2 [00:23<00:00, 11.28s/it]Downloading shards: 100%|██████████| 2/2 [00:23<00:00, 11.91s/it]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:26<00:26, 26.33s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:40<00:00, 18.91s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:40<00:00, 20.02s/it]
+The `seen_tokens` attribute is deprecated and will be removed in v4.41. Use the `cache_position` model input instead.
+2024-08-25 16:33:20,419 [WARNING] [logging.py:328] You are not running the flash-attention implementation, expect numerical differences.
+You seem to be using the pipelines sequentially on GPU. In order to maximize efficiency please use a dataset
+[nltk_data] Downloading package punkt to
+[nltk_data]     /common/home/users/d/dh.huang.2023/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+2024-08-25 17:24:42,292 [WARNING] [modeling_phi3.py:62] `flash-attention` package not found, consider installing for better performance: No module named 'flash_attn'.
+2024-08-25 17:24:42,293 [WARNING] [modeling_phi3.py:66] Current `flash-attention` does not support `window_size`. Either upgrade or use `attn_implementation='eager'`.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:24<00:24, 24.79s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:37<00:00, 17.92s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:37<00:00, 18.95s/it]
+The `seen_tokens` attribute is deprecated and will be removed in v4.41. Use the `cache_position` model input instead.
+2024-08-25 17:25:20,903 [WARNING] [logging.py:328] You are not running the flash-attention implementation, expect numerical differences.
+You seem to be using the pipelines sequentially on GPU. In order to maximize efficiency please use a dataset
+[nltk_data] Downloading package punkt to
+[nltk_data]     /common/home/users/d/dh.huang.2023/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+2024-08-25 18:18:32,005 [WARNING] [modeling_phi3.py:62] `flash-attention` package not found, consider installing for better performance: No module named 'flash_attn'.
+2024-08-25 18:18:32,005 [WARNING] [modeling_phi3.py:66] Current `flash-attention` does not support `window_size`. Either upgrade or use `attn_implementation='eager'`.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:24<00:24, 24.34s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:37<00:00, 17.67s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:37<00:00, 18.67s/it]
+The `seen_tokens` attribute is deprecated and will be removed in v4.41. Use the `cache_position` model input instead.
+2024-08-25 18:19:10,173 [WARNING] [logging.py:328] You are not running the flash-attention implementation, expect numerical differences.
+You seem to be using the pipelines sequentially on GPU. In order to maximize efficiency please use a dataset
+[nltk_data] Downloading package punkt to
+[nltk_data]     /common/home/users/d/dh.huang.2023/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+2024-08-25 19:14:22,403 [WARNING] [modeling_phi3.py:62] `flash-attention` package not found, consider installing for better performance: No module named 'flash_attn'.
+2024-08-25 19:14:22,403 [WARNING] [modeling_phi3.py:66] Current `flash-attention` does not support `window_size`. Either upgrade or use `attn_implementation='eager'`.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:25<00:25, 25.10s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:39<00:00, 18.81s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:39<00:00, 19.75s/it]
+The `seen_tokens` attribute is deprecated and will be removed in v4.41. Use the `cache_position` model input instead.
+2024-08-25 19:15:02,620 [WARNING] [logging.py:328] You are not running the flash-attention implementation, expect numerical differences.
+You seem to be using the pipelines sequentially on GPU. In order to maximize efficiency please use a dataset
+[nltk_data] Downloading package punkt to
+[nltk_data]     /common/home/users/d/dh.huang.2023/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+2024-08-25 20:13:44,756 [WARNING] [modeling_phi3.py:62] `flash-attention` package not found, consider installing for better performance: No module named 'flash_attn'.
+2024-08-25 20:13:44,756 [WARNING] [modeling_phi3.py:66] Current `flash-attention` does not support `window_size`. Either upgrade or use `attn_implementation='eager'`.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:24<00:24, 24.71s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:37<00:00, 17.88s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:37<00:00, 18.90s/it]
+The `seen_tokens` attribute is deprecated and will be removed in v4.41. Use the `cache_position` model input instead.
+2024-08-25 20:14:23,253 [WARNING] [logging.py:328] You are not running the flash-attention implementation, expect numerical differences.
+You seem to be using the pipelines sequentially on GPU. In order to maximize efficiency please use a dataset
+[nltk_data] Downloading package punkt to
+[nltk_data]     /common/home/users/d/dh.huang.2023/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+2024-08-25 21:17:23,392 [WARNING] [modeling_phi3.py:62] `flash-attention` package not found, consider installing for better performance: No module named 'flash_attn'.
+2024-08-25 21:17:23,392 [WARNING] [modeling_phi3.py:66] Current `flash-attention` does not support `window_size`. Either upgrade or use `attn_implementation='eager'`.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:24<00:24, 24.83s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:37<00:00, 17.97s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:37<00:00, 19.00s/it]
+The `seen_tokens` attribute is deprecated and will be removed in v4.41. Use the `cache_position` model input instead.
+2024-08-25 21:18:02,190 [WARNING] [logging.py:328] You are not running the flash-attention implementation, expect numerical differences.
+You seem to be using the pipelines sequentially on GPU. In order to maximize efficiency please use a dataset
+[nltk_data] Downloading package punkt to
+[nltk_data]     /common/home/users/d/dh.huang.2023/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+2024-08-25 22:37:47,514 [WARNING] [modeling_phi3.py:62] `flash-attention` package not found, consider installing for better performance: No module named 'flash_attn'.
+2024-08-25 22:37:47,514 [WARNING] [modeling_phi3.py:66] Current `flash-attention` does not support `window_size`. Either upgrade or use `attn_implementation='eager'`.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:24<00:24, 24.55s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:37<00:00, 17.88s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:37<00:00, 18.88s/it]
+The `seen_tokens` attribute is deprecated and will be removed in v4.41. Use the `cache_position` model input instead.
+2024-08-25 22:38:26,016 [WARNING] [logging.py:328] You are not running the flash-attention implementation, expect numerical differences.
+You seem to be using the pipelines sequentially on GPU. In order to maximize efficiency please use a dataset
+[nltk_data] Downloading package punkt to
+[nltk_data]     /common/home/users/d/dh.huang.2023/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+2024-08-26 00:55:39,714 [WARNING] [modeling_phi3.py:62] `flash-attention` package not found, consider installing for better performance: No module named 'flash_attn'.
+2024-08-26 00:55:39,714 [WARNING] [modeling_phi3.py:66] Current `flash-attention` does not support `window_size`. Either upgrade or use `attn_implementation='eager'`.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:25<00:25, 25.45s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:38<00:00, 18.41s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:38<00:00, 19.47s/it]
+The `seen_tokens` attribute is deprecated and will be removed in v4.41. Use the `cache_position` model input instead.
+2024-08-26 00:56:19,334 [WARNING] [logging.py:328] You are not running the flash-attention implementation, expect numerical differences.
+You seem to be using the pipelines sequentially on GPU. In order to maximize efficiency please use a dataset
+[nltk_data] Downloading package punkt to
+[nltk_data]     /common/home/users/d/dh.huang.2023/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+2024-08-26 04:39:03,923 [WARNING] [modeling_phi3.py:62] `flash-attention` package not found, consider installing for better performance: No module named 'flash_attn'.
+2024-08-26 04:39:03,923 [WARNING] [modeling_phi3.py:66] Current `flash-attention` does not support `window_size`. Either upgrade or use `attn_implementation='eager'`.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:24<00:24, 24.57s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:37<00:00, 17.82s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:37<00:00, 18.83s/it]
+The `seen_tokens` attribute is deprecated and will be removed in v4.41. Use the `cache_position` model input instead.
+2024-08-26 04:39:42,466 [WARNING] [logging.py:328] You are not running the flash-attention implementation, expect numerical differences.
+You seem to be using the pipelines sequentially on GPU. In order to maximize efficiency please use a dataset
+[nltk_data] Downloading package punkt to
+[nltk_data]     /common/home/users/d/dh.huang.2023/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+2024-08-26 09:24:10,693 [WARNING] [modeling_phi3.py:62] `flash-attention` package not found, consider installing for better performance: No module named 'flash_attn'.
+2024-08-26 09:24:10,693 [WARNING] [modeling_phi3.py:66] Current `flash-attention` does not support `window_size`. Either upgrade or use `attn_implementation='eager'`.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:25<00:25, 25.51s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:38<00:00, 18.14s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:38<00:00, 19.25s/it]
+The `seen_tokens` attribute is deprecated and will be removed in v4.41. Use the `cache_position` model input instead.
+2024-08-26 09:24:50,135 [WARNING] [logging.py:328] You are not running the flash-attention implementation, expect numerical differences.
+You seem to be using the pipelines sequentially on GPU. In order to maximize efficiency please use a dataset
+[nltk_data] Downloading package punkt to
+[nltk_data]     /common/home/users/d/dh.huang.2023/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+2024-08-26 14:30:12,616 [WARNING] [modeling_phi3.py:62] `flash-attention` package not found, consider installing for better performance: No module named 'flash_attn'.
+2024-08-26 14:30:12,616 [WARNING] [modeling_phi3.py:66] Current `flash-attention` does not support `window_size`. Either upgrade or use `attn_implementation='eager'`.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:23<00:23, 23.59s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:36<00:00, 17.02s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:36<00:00, 18.00s/it]
+The `seen_tokens` attribute is deprecated and will be removed in v4.41. Use the `cache_position` model input instead.
+2024-08-26 14:30:49,269 [WARNING] [logging.py:328] You are not running the flash-attention implementation, expect numerical differences.
+You seem to be using the pipelines sequentially on GPU. In order to maximize efficiency please use a dataset
+[nltk_data] Downloading package punkt to
+[nltk_data]     /common/home/users/d/dh.huang.2023/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+2024-08-26 19:44:35,757 [WARNING] [modeling_phi3.py:62] `flash-attention` package not found, consider installing for better performance: No module named 'flash_attn'.
+2024-08-26 19:44:35,757 [WARNING] [modeling_phi3.py:66] Current `flash-attention` does not support `window_size`. Either upgrade or use `attn_implementation='eager'`.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:23<00:23, 23.03s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:35<00:00, 16.64s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:35<00:00, 17.59s/it]
+The `seen_tokens` attribute is deprecated and will be removed in v4.41. Use the `cache_position` model input instead.
+2024-08-26 19:45:11,738 [WARNING] [logging.py:328] You are not running the flash-attention implementation, expect numerical differences.
+You seem to be using the pipelines sequentially on GPU. In order to maximize efficiency please use a dataset

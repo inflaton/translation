@@ -1,0 +1,74 @@
+loading env vars from: D:\code\projects\rapget-translation\.env
+Adding D:\code\projects\rapget-translation to sys.path
+C:\Users\dongh\.conda\envs\rapget\Lib\site-packages\threadpoolctl.py:1214: RuntimeWarning: 
+Found Intel OpenMP ('libiomp') and LLVM OpenMP ('libomp') loaded at
+the same time. Both libraries are known to be incompatible and this
+can cause random crashes or deadlocks on Linux when loaded in the
+same Python program.
+Using threadpoolctl may cause crashes or deadlocks. For more
+information and possible workarounds, please see
+    https://github.com/joblib/threadpoolctl/blob/master/multiple_openmp.md
+
+  warnings.warn(msg, RuntimeWarning)
+[nltk_data] Downloading package wordnet to
+[nltk_data]     C:\Users\dongh\AppData\Roaming\nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\dongh\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to
+[nltk_data]     C:\Users\dongh\AppData\Roaming\nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+loading: D:\code\projects\rapget-translation\eval_modules\calc_repetitions.py
+loading D:\code\projects\rapget-translation\llm_toolkit\translation_utils.py
+[nltk_data] Downloading package wordnet to
+[nltk_data]     C:\Users\dongh\AppData\Roaming\nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\dongh\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to
+[nltk_data]     C:\Users\dongh\AppData\Roaming\nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+gpt-4o datasets/mac/mac.tsv results/mac-results_few_shots_openai.csv 300
+Evaluating model: gpt-4o
+loading train/test data files
+DatasetDict({
+    train: Dataset({
+        features: ['chinese', 'english'],
+        num_rows: 4528
+    })
+    test: Dataset({
+    test: Dataset({
+        features: ['chinese', 'english'],
+        num_rows: 1133
+    })
+})
+--------------------------------------------------
+chinese: 老耿端起枪，眯缝起一只三角眼，一搂扳机响了枪，冰雹般的金麻雀劈哩啪啦往下落，铁砂子在柳枝间飞迸着，嚓嚓有声。
+chinese: 老耿端起枪，眯缝起一只三角眼，一搂扳机响了枪，冰雹般的金麻雀劈哩啪啦往下落，铁砂子在柳枝间飞迸着，嚓嚓有声。
+--------------------------------------------------
+english: Old Geng picked up his shotgun, squinted, and pulled the trigger. Two sparrows crashed to the ground like hailstones as shotgun pellets tore noisily through the branches.
+*** Evaluating with num_shots: 0
+*** Evaluating with num_shots: 0
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1133/1133 [28:52<00:00,  1.53s/it]   
+gpt-4o/shots-00 metrics: {'meteor': 0.3797419877414444, 'bleu_scores': {'bleu': 0.12054600115274576, 'precisions': [0.4395170970950372, 0.1657507850413931, 0.08008175399479747, 0.041705426356589144], 'brevity_penalty': 0.965191371371961, 'length_ratio': 0.965783371977476, 'translation_length': 29157, 'reference_length': 30190}, 'rouge_scores': {'rouge1': 0.42488525198918325, 'rouge2': 0.17659595999851255, 'rougeL': 0.37036814222422193, 'rougeLsum': 0.37043557409027883}, 'accuracy': 0.00088261253309797, 'correct_ids': [77]}
+*** Evaluating with num_shots: 1
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1133/1133 [22:44<00:00,  1.20s/it]   
+gpt-4o/shots-01 metrics: {'meteor': 0.37588586538591867, 'bleu_scores': {'bleu': 0.12049862468096047, 'precisions': [0.4438186524872315, 0.16850617418861327, 0.08162258566387129, 0.043228692450813504], 'brevity_penalty': 0.9454338245859127, 'length_ratio': 0.9468698244451805, 'translation_length': 28586, 'reference_length': 30190}, 'rouge_scores': {'rouge1': 0.4200247346821462, 'rouge2': 0.17611482166851536, 'rougeL': 0.36555347015620193, 'rougeLsum': 0.36597227925335113}, 'accuracy': 0.00088261253309797, 'correct_ids': [77]}
+*** Evaluating with num_shots: 3
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1133/1133 [38:45<00:00,  2.05s/it]   
+gpt-4o/shots-03 metrics: {'meteor': 0.3768512103553621, 'bleu_scores': {'bleu': 0.12408746322526747, 'precisions': [0.4504073680481757, 0.17455806915894748, 0.08641500730375952, 0.04606687515034881], 'brevity_penalty': 0.9329257300005195, 'length_ratio': 0.9350778403444849, 'translation_length': 28230, 'reference_length': 30190}, 'rouge_scores': {'rouge1': 0.42185440095437376, 'rouge2': 0.18099296897772787, 'rougeL': 0.36683121325656565572, 'rougeLsum': 0.36692420445626067}, 'accuracy': 0.00088261253309797, 'correct_ids': [77]}
+*** Evaluating with num_shots: 5
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1133/1133 [31:48<00:00,  1.68s/it]   
+gpt-4o/shots-05 metrics: {'meteor': 0.35772544915145654, 'bleu_scores': {'bleu': 0.12169683347842021, 'precisions': [0.45675271230826786, 0.1799429620658671, 0.0908092273892347, 0.04932145886344359], 'brevity_penalty': 0.8785850406914042, 'length_ratio': 0.8853925140775091, 'translation_length': 26730, 'reference_length': 30190}, 'rouge_scores': {'rouge1': 0.3989536343087876, 'rouge2': 0.17450105082463535, 'rougeL': 0.348320055666115, 'rougeLsum': 0.3483328999510906}, 'accuracy': 0.00088261253309797, 'correct_ids': [77]}
+*** Evaluating with num_shots: 10
+ 'rougeLsum': 0.3483328999510906}, 'accuracy': 0.00088261253309797, 'correct_ids': [77]}
+*** Evaluating with num_shots: 10
+ 'rougeLsum': 0.3483328999510906}, 'accuracy': 0.00088261253309797, 'correct_ids': [77]}
+*** Evaluating with num_shots: 10
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1133/1133 [33:48<00:00,  1.79s/it] 
+gpt-4o/shots-10 metrics: {'meteor': 0.3746444651189953, 'bleu_scores': {'bleu': 0.12498238983123719, 'precisions': [0.45538813929351135, 0.17677558937630558, 0.08810041971086585, 0.04747233145498034], 'brevity_penalty': 0.9226631755170949, 'length_ratio': 0.9255051341503809, 'translation_length': 27941, 'reference_length': 30190}, 'rouge_scores': {'rouge1': 0.42057276805902843, 'rouge2': 0.182701868068981, 'rougeL': 0.3668754130715727, 'rougeLsum': 0.3673183260659394}, 'accuracy': 0.00176522506619594, 'correct_ids': [77, 364]}
+*** Evaluating with num_shots: 50
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1133/1133 [38:15<00:00,  2.03s/it] 
+gpt-4o/shots-50 metrics: {'meteor': 0.40413933252744955, 'bleu_scores': {'bleu': 0.13782450337569063, 'precisions': [0.4695234708392603, 0.19261125727201986, 0.09873251410464487, 0.05424823410696267], 'brevity_penalty': 0.9290310787259491, 'length_ratio': 0.9314342497515734, 'translation_length': 28120, 'reference_length': 30190}, 'rouge_scores': {'rouge1': 0.44343703034704307, 'rouge2': 0.20310004059554654, 'rougeL': 0.3908878454222482, 'rougeLsum': 0.39082492657743595}, 'accuracy': 0.00353045013239188, 'correct_ids': [77, 364, 567, 1000]}

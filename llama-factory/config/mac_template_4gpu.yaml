@@ -1,0 +1,43 @@
+### model
+model_name_or_path: ORG_NAME/MODEL_NAME
+quantization_bit: 4
+
+### method
+stage: sft
+do_train: true
+finetuning_type: lora
+lora_target: all
+
+### dataset
+dataset: alpaca_mac
+template: CHAT_TEMPLATE
+cutoff_len: 1024
+max_samples: 4528
+overwrite_cache: true
+preprocessing_num_workers: 16
+
+### output
+output_dir: saves/MODEL_NAME
+logging_steps: 5
+save_steps: 70
+plot_loss: true
+# overwrite_output_dir: true
+
+### train
+per_device_train_batch_size: 2
+gradient_accumulation_steps: 8
+learning_rate: 1.0e-4
+num_train_epochs: 6.0
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+bf16: true
+ddp_timeout: 180000000
+
+### eval
+val_size: 0.01
+per_device_eval_batch_size: 1
+eval_strategy: steps
+eval_steps: 70
+
+report_to: wandb
+run_name: MODEL_NAME_lora_sft
